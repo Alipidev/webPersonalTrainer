@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Cargamos el CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Cargamos el CSS de Leaflet librería del mapa -->
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css">
+    <!-- Cargamos los iconos de las redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Contacto | Entrenador personal</title>
+</head>
+<body>
+    <!-- Cargamos el header de la página -->
+    <div id="mi-header"></div>
+
+    <main>
+        <section class="section-contacto">
+            <h2>Contacto</h2>
+
+            <div class="contacto-inner">
+                <!-- Datos de contacto -->
+                 <div class="contacto-info">
+                    <h3>Dónde encontrarnos</h3>
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Ayuntamiento de Valencia, Valencia</p>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid da-phone"></i>
+                        <p>+34 000 000 000</p>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>alina@personaltrainer.com</p>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <p>Lunes a Viernes de 8:00 - 20:00</p>
+                    </div>
+
+                    <!-- Botón de como llegar -->
+                    <button id="btn-ruta">
+                        <i class="fa-solid fa-route"></i>
+                        Cómo llegar
+                    </button>
+                 </div>
+
+                
+                
+
+                 <!-- Mapa -->
+                  <div class="contacto-mapa">
+                    <div id="mapa"></div>
+                  </div>
+
+                  
+            </div>
+        </section>
+    </main>
+
+    <!-- Cargamos el footer -->
+     <div id="mi-footer"></div>
+   <!-- Cargamos los scripts -->
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+   <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    <script src="../js/components.js"></script>
+    <script src="../js/mapa.js"></script> <!-- Js del mapa-->
+    
+</body>
+</html>

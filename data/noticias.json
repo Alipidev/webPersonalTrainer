@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "tipo": "Consejo",
+        "titulo": "Los 5 errores más comunes al hacer sentadillas",
+        "descripcion": "Aprende a corregir tu técnica para evitar lesiones y sacar el máximo partido a este ejercicio clave."
+    },
+    {
+        "id": 2,
+        "tipo": "Receta",
+        "titulo": "Batido proteico post-entreno",
+        "descripcion": "Una receta rápida y nutritiva para recuperar el músculo despues de un buen entrenamiento"
+    },
+    {
+        "id": 3,
+        "tipo": "Reto mensual",
+        "titulo": "Reto de mayo: 30 días de abdominales",
+        "descripcion": "Únete al reto de mes y consigue un core más fuerte con tan solo 10 minutos al día"
+    }
+]
