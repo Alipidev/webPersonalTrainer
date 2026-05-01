@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Cargamos el CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Cargamos los iconos de las redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Presupuesto | Entrenador personal</title>
+</head>
+<body>
+    <header class="site-header">
+        <!-- Encabezado de la página web -->
+         <div class="header-inner">
+            <div class="logo">
+                <h1>
+                    <a href="../index.html" class="logo-text">
+                        PERSONAL TRAINER 
+                    </a>
+                </h1>
+            </div>
+            <!-- Navegador -->
+          <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="presupuesto.html" class="active">Presupuesto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </nav>
+    
+          <!-- Botón hamburguesa, solo visible en móvil -->
+           <button class="btn-hamburguesa" id="btn-hamburguesa">
+            <span></span>
+            <span></span>
+            <span></span>
+           </button>
+         </div>
+    
+         
+    </header>
+
+    <!-- Contenido principal de la página web -->
+    <main>
+        <!-- Primer apartado datos de contacto -->
+         <section class="section-datos">
+            <h2>Solicitud de presupuesto</h2>
+            <form id="form-contacto" novalidate>
+                <fieldset>
+                    <legend>Datos de contacto</legend>
+                    
+                    <!-- Nombre -->
+                     <div class="form-grupo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+                        <span class="error" id="error-nombre"></span> <!--Ponemos span class error porque ahi es donde el JS mostrará los mensajes de error-->
+                     </div>
+
+                     <!-- Apellidos -->
+                     <div class="form-grupo">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos">
+                        <span class="error" id="error-apellidos"></span>
+                     </div>
+
+                     <!-- Teléfono de contacto -->
+                     <div class="form-grupo">
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" id="telefono" name="telefono" placeholder="123456789">
+                        <span class="error" id="error-telefono"></span>
+                     </div>
+
+                     <!-- Email -->
+                     <div class="form-grupo">
+                        <label for="email">Correo electrónico</label>
+                        <input type="text" id="email" name="email" placeholder="tu@email.com">
+                        <span class="error" id="error-email"></span>
+                     </div>
+                
+                </fieldset>
+                
+                <!-- Segundo apartado Presupuesto -->
+                <fieldset>
+                    <legend>Presupuesto</legend>
+
+                    <!-- Producto -->
+                     <div class="form-grupo">
+                        <label for="producto">Producto</label>
+                        <select name="producto" id="producto">
+                            <option value="">-- Selecciona un producto --</option>
+                            <option value="50">Entrenamiento presencial - 50€/mes</option>
+                            <option value="30">Entrenamiento online - 30€/mes</option>
+                            <option value="20">Plan nutricional - 20€/mes</option>
+                        </select>
+                        <span class="error" id="error-producto"></span>
+                     </div>
+
+                     <!-- Plazo -->
+                      <div class="form-grupo">
+                        <label for="plazo">Plazo</label>
+                        <div class="plazo-input">
+                            <input type="number" name="plazo" id="plazo" min="1" max="24" placeholder="Ej 3">
+                            <select name="unidad-plazo" id="unidad-plazo">
+                                <option value="meses">Meses</option>
+                                <option value="dias">Días</option>
+                            </select>
+                        </div>
+                        <small>
+                            En meses - A partir de 6 meses: 15% de descuento. A partir de 12 meses: 25% de descuento <br>
+                            En días - A partir de 180 días: 5% de descuento. A partir de 365 días: 10% de descuento
+                        </small>
+                        <span class="error" id="error-plazo"></span>
+                      </div>
+
+                    <!-- Extras -->
+                       <div class="form-grupo">
+                            <label>Extras</label>
+                            <div class="opciones-extras">
+                                <label>
+                                    <input type="checkbox" name="extras" value="15">
+                                    Seguimiento semanal - 15€
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="extras" value="10">
+                                    Plan de alimentación- 10€
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="extras" value="20">
+                                    Videollamada mensual - 20€
+                                </label>
+                            </div>
+                       </div>
+
+                    <!-- Presupuesto total -->
+                     <div class="form-grupo">
+                        <label for="presupuesto-total">Presupuesto total</label>
+                        <input type="text" name="presupuesto-total" id="presupuesto-total" readonly placeholder="0.00€">
+                     </div>
+
+                     <!-- Condiciones y envio -->
+                      <div class="form-grupo">
+                        <label class="condiciones-label">
+                            <input type="checkbox" name="condiciones" id="condiciones">
+                            Acepto las condiciones de privacidad
+                        </label>
+                        <span class="error" id="error-condiciones"></span>
+                      </div>
+
+                      <div class="form-botones">
+                        <button type="submit">Enviar presupuesto</button>
+                        <button type="reset" id="btn-reset">Resetear</button>
+                      </div>
+                </fieldset>
+            </form>
+         </section>
+
+    </main>
+
+     <!-- Footer -->
+     <footer class="site-footer">
+        <p class="footer-titulo">Síguenos en nuestras redes sociales</p>
+            <div class="social-iconos">
+                <a href="https://github.com/alipidev" target="_blank" aria-label="GitHub">
+                    <i class="fa-brands fa-github">
+                        
+                    </i>
+                </a>
+                <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+            <div class="footer-address">
+                <address>
+                    Ayuntamiento Valencia
+                    <br>
+                    46003, Valencia, España
+                </address>
+            </div>
+        <div class="footer-content">
+            <p>© 2026 Alipidev. Todos los derechos reservados. 
+            <a href="aviso-legal.html">Aviso Legal</a>
+            </p>
+        </div>
+    </footer>
+   <!-- Cargamos el script -->
+    <script src="../js/components.js"></script>
+    <script src="../js/formulario.js"></script>
+</body>
+</html>

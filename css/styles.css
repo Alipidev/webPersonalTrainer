@@ -1,0 +1,1253 @@
+/* =============================================
+   PERSONAL TRAINER ALINA — style.css
+   Tema oscuro · Mobile First
+   Breakpoints:
+     Tablet  → min-width: 768px
+     Desktop → min-width: 1024px
+============================================= */
+/* =============================================
+   ÍNDICE DE ESTILOS - SITIO WEB PERSONAL TRAINER
+   1. AJUSTES PREDEFINIDOS DE ESTILOS
+   2. HEADER
+   3. PÁGINA DE INICIO (SECCIÓN HERO)
+   4. PÁGINA DE INICIO (SECCIÓN SERVICIOS)
+   5. PÁGINA DE INICIO (SECCIÓN NOTICIAS)
+   6. PÁGINA DE INCIIO (SECCIÓN TESTIMONIOS)
+   7. PÁGINA DE GALERÍA
+   8. PÁGINA PRESUPUESTOS
+   9. PÁGINA CONTACTOS
+   10. PÁGINA AVISO LEGAL
+   11. FOOTER
+============================================= */
+
+/* =============================================
+   1. AJUSTES PREDEFINIDOS DE ESTILOS
+============================================= */
+
+/* ── Reset y base ── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #f0f0f0;
+    background-color: #1e1e1e;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+main{ 
+    flex: 1;
+    padding-top: 15px;
+ }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+/* ── Variables de color ── */
+:root {
+    --color-primary:      #e05a2b;
+    --color-bg:           #1e1e1e;
+    --color-bg-card:      #2a2a2a;
+    --color-bg-section:   #252525;
+    --color-text:         #f0f0f0;
+    --color-text-muted:   #aaaaaa;
+    --color-border:       rgba(255, 255, 255, 0.08);
+    --color-border-hover: rgba(255, 255, 255, 0.18);
+    --max-width:          1200px;
+    --padding-section:    70px 20px;
+}
+
+/* =============================================
+   HEADER
+   Estructura esperada en components.js:
+   <header class="site-header">
+     <div class="header-inner">
+       <div class="logo"><a href="/">Alina PT</a></div>
+       <nav class="nav-menu">
+         <ul>
+           <li><a href="/">Inicio</a></li>
+           <li><a href="/pages/galeria.html">Galería</a></li>
+         </ul>
+       </nav>
+     </div>
+   </header>
+============================================= */
+/* =============================================
+   2. HEADER
+============================================= */
+.site-header {
+    background-color: #141414;
+    border-bottom: 1px solid var(--color-border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.header-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /*logo iz1, nav der*/
+    align-items: center;
+}
+
+/* ── Logo izquierda ── */
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo h1{
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.logo-text {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* ── Nav a la derecha con borde ── */
+.navbar {
+    border-left: 1px solid var(--color-border);  /* borde que lo separa del logo */
+    padding-left: 28px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.navbar a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;    /* reserva espacio para el borde naranja */
+    transition: color 0.2s, border-color 0.2s;
+}
+
+/* Hover: todos los links */
+.navbar a:hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
+
+/* Página activa: siempre naranja */
+.navbar a.active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
+
+/* ── Botón hamburguesa ── */
+.btn-hamburguesa {
+    display: none;              /* oculto por defecto en desktop */
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;                   /* espacio entre las tres líneas */
+    background: none;           /* sin fondo */
+    border: none;               /* sin borde */
+    cursor: pointer;
+    padding: 4px;
+    z-index: 200;               /* por encima del navbar */
+}
+
+.btn-hamburguesa span {
+    display: block;
+    width: 24px;                /* ancho de cada línea */
+    height: 2px;                /* grosor de cada línea */
+    background-color: #ffffff;  /* color blanco */
+    border-radius: 2px;
+    transition: all 0.3s;       /* animación suave al abrir/cerrar */
+}
+
+/* ── Animación al abrir el menú ── */
+/* Cuando el botón tiene la clase 'abierto' las líneas forman una X */
+.btn-hamburguesa.abierto span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);   /* línea superior gira */
+}
+.btn-hamburguesa.abierto span:nth-child(2) {
+    opacity: 0;                                 /* línea central desaparece */
+}
+.btn-hamburguesa.abierto span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg); /* línea inferior gira */
+}
+
+/* ── Responsive móvil ── */
+@media (max-width: 767px) {
+
+    /* Mostramos el botón hamburguesa */
+    .btn-hamburguesa {
+        display: flex;
+    }
+
+    /* Ocultamos el navbar por defecto en móvil */
+    .navbar {
+        display: none;              /* oculto hasta que se pulse el botón */
+        position: fixed;            /* flota sobre el contenido */
+        top: 64px;                  /* justo debajo del header */
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: #141414;  /* mismo fondo que el header */
+        border-bottom: 1px solid var(--color-border);
+        padding: 16px 24px;
+        border-left: none;          /* quitamos el borde izquierdo del desktop */
+    }
+
+    /* Cuando el navbar tiene la clase 'abierto' se muestra */
+    .navbar.abierto {
+        display: flex;
+    }
+
+    /* Los links en columna en móvil */
+    .navbar ul {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    .navbar a {
+        font-size: 1rem;
+        padding: 8px 0;
+    }
+
+}
+/* =============================================
+   3. HERO
+============================================= */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+/* Animación de deslizamiento desde la derecha */
+@keyframes deslizarDesdeDerechaHero {
+    from {
+        opacity: 0;
+        transform: translateX(calc(-50% + 100px)); /* centrado + desplazado a la derecha */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%); /* solo centrado */
+    }
+}
+
+.hero-text {
+    position: absolute;
+    z-index: 1;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    animation: deslizarDesdeDerechaHero 1.5s ease-out 0.3s both;
+}
+
+.hero-text h2 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    color: #ffffff;
+    margin-bottom: 14px;
+    font-weight: 700;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.8);
+}
+
+.hero-text h3 {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: var(--color-text-muted);
+    font-weight: 400;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    margin-bottom: 16px;
+}
+.hero-text p {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-cta:hover {
+    background-color: var(--color-border-hover);
+    transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+    .hero-text{
+        bottom: 15%;
+        width: 70%;
+    }
+
+    .btn-cta{
+        font-size: 1.1rem;
+        padding: 16px 40px;
+    }
+
+}
+@media (min-width: 1024px){
+    .hero-text{
+        bottom: 20%;
+        width: 50%;
+    }
+}
+
+/* =============================================
+   4. SERVICIOS
+============================================= */
+.section-services {
+    background-color: var(--color-bg-section);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--padding-section);
+}
+
+.section-services h2 {
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    color: #ffffff;
+    margin-bottom: 48px;
+}
+
+.div-services {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.grid-services {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.item-services {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 30px 26px;
+    transition: border-color 0.25s, transform 0.25s;
+}
+
+.item-services:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+}
+
+.item-services h3 {
+    font-size: 1.05rem;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.item-services p {
+    color: var(--color-text-muted);
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+.badge-garantia{
+    display: inline-block;
+    color: var(--color-text);
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 16px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+.badge-garantia i{
+    color: var(--color-primary);
+    margin-right: 6px;
+}
+
+.section-stats {
+    background-color: var(--color-bg-section);
+    padding: var(--padding-section);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.grid-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 30px 40px;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background-color: var(--color-bg-card);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    min-width: 180px;
+}
+
+.stat-item:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-5px);
+}
+
+.stat-numero {
+    display: block;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    color: var(--color-text-muted);
+}
+@media (min-width: 768px) {
+    .grid-services { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+    .grid-services { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* =============================================
+   5. NOTICIAS (se rellenará con JS/JSON)
+============================================= */
+.noticias-json {
+    
+    background-color: var(--color-bg-section);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--padding-section);
+}
+
+.noticias-json h2 {
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    color: #ffffff;
+    margin-bottom: 40px;
+    
+}
+
+.grid-noticias {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card-noticia {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 24px;
+    transition: border-color 0.25s;
+    cursor: pointer;
+    transition: border-color 0.3s ease, transform 0.3 ease;
+}
+
+.card-noticia:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-5px);
+}
+
+.card-noticia h3 {
+    font-size: 1.05rem;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+
+.card-noticia p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.tag{
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.tag-consejo{
+    background-color: rgba(224, 90, 43, 0.2);
+    color: var(--color-primary);
+}
+
+.tag-receta{
+    background-color: rgba(46, 160, 67, 0.2);
+    color: #2ea043;
+}
+
+.tag-reto{
+    background-color: rgba(88, 166, 255, 0,2);
+    color: #58a6ff;
+}
+
+.noticia-fecha{
+    display: block;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-top: 10px;
+}
+
+.btn-leer-mas {
+    display: inline-block;
+    margin-top: 16px;
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0;
+    transition: gap 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-leer-mas:hover i {
+    transform: translateX(4px);
+    transition: transform 0.3s ease;
+}
+
+/* Estilos del modal de noticias */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+}
+
+.modal-overlay.activo {
+    display: flex;
+}
+
+.modal {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+}
+
+#modal-titulo {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 12px 0 8px;
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-cerrar:hover {
+    color: var(--color-primary);
+}
+
+.modal h3 {
+    margin: 12px 0 8px;
+    color: var(--color-text);
+    font-size: 1.4rem;
+}
+
+.modal p {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    margin-top: 16px;
+}
+
+.modal ol {
+    padding-left: 20px;
+    margin-top: 16px;
+}
+
+.modal ol li {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    margin-bottom: 8px;
+    padding-left: 8px;
+}
+
+.modal ol li::marker {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .grid-noticias { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+    .grid-noticias { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* =============================================
+   6. TESTIMONIOS
+============================================= */
+.testimonios {
+    padding: var(--padding-section);
+    background-color: var(--color-bg);
+    text-align: center;
+}
+
+.testimonios h2 {
+    margin-bottom: 40px;
+}
+
+/* Media de valoración */
+.valoracion-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 50px;
+}
+
+.valoracion-numero {
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1;
+}
+
+.valoracion-estrellas {
+    font-size: 1.8rem;
+    color: #f5a623;
+}
+
+.valoracion-texto {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+/* Grid de tarjetas */
+.grid-testimonios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* Tarjeta testimonio */
+.card-testimonio {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 28px;
+    text-align: left;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.card-testimonio:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-5px);
+}
+
+/* Header con avatar y nombre */
+.testimonio-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.testimonio-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.testimonio-header h3 {
+    font-size: 1rem;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.testimonio-perfil {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+/* Estrellas individuales */
+.testimonio-estrellas {
+    color: #f5a623;
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+}
+
+/* Texto de la opinión */
+.card-testimonio p {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+    .grid-testimonios { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+    .grid-testimonios { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* =============================================
+   7. PÁGINA DE GALERÍA
+============================================= */
+.galeria {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galeria h2 {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    color: #fffdfd;
+    margin-bottom: 30px;
+}
+
+/* ── Grid de imágenes ── */
+.grid-galeria {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+
+    /* Móvil: 1 columna */
+    grid-template-columns: 1fr;
+}
+
+/* Tablet: 2 columnas */
+@media (min-width: 600px) {
+    .grid-galeria {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+}
+
+/* Desktop: 3 columnas */
+@media (min-width: 1024px) {
+    .grid-galeria {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+}
+
+/* ── Imágenes dentro del grid ── */
+.grid-galeria a {
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    line-height: 0; /* elimina espacio bajo la imagen */
+}
+
+.grid-galeria a img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Tablet: imágenes un poco más altas */
+@media (min-width: 600px) {
+    .grid-galeria a img {
+        height: 260px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .grid-galeria a img {
+        height: 300px;
+    }
+}
+
+/* Efecto hover */
+.grid-galeria a:hover img {
+    transform: scale(1.04);
+    opacity: 0.9;
+}
+
+/* =============================================
+   8. PÁGINA PRESUPUESTOS
+============================================= */
+
+.error{
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    margin-top: 4px;
+    display: block; /*Para que ocupe su propia linea*/
+}
+/* ── Sección principal ── */
+.section-datos {
+    max-width: 700px;           /* limita el ancho para que no quede muy estirado */
+    margin: 60px auto;          /* centra la sección horizontalmente */
+    padding: 0 20px;            /* espacio a los lados en móvil */
+}
+
+.section-datos h2 {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);  /* tamaño responsive igual que el resto de la web */
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ── Fieldset ── */
+fieldset {
+    border: 1px solid var(--color-border);  /* borde sutil igual que las cards */
+    border-radius: 12px;                    /* bordes redondeados */
+    padding: 28px;                          /* espacio interior */
+    margin-bottom: 24px;                    /* separación entre fieldsets */
+    background-color: var(--color-bg-card); /* fondo oscuro de card */
+}
+
+legend {
+    color: var(--color-primary);    /* naranja para que destaque */
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0 10px;                /* espacio a los lados del texto */
+}
+
+/* ── Grupos de campos ── */
+.form-grupo {
+    display: flex;
+    flex-direction: column;     /* label arriba, input abajo */
+    gap: 6px;                   /* espacio entre label e input */
+    margin-bottom: 20px;        /* separación entre campos */
+}
+
+.form-grupo label {
+    color: var(--color-text-muted);  /* gris suave para las etiquetas */
+    font-size: 0.9rem;
+}
+
+/* ── Inputs y select ── */
+.form-grupo input,
+.form-grupo select {
+    background-color: var(--color-bg);          /* fondo oscuro */
+    border: 1px solid var(--color-border);      /* borde sutil */
+    border-radius: 8px;                         /* bordes redondeados */
+    color: var(--color-text);                   /* texto claro */
+    padding: 10px 14px;                         /* espacio interior */
+    font-size: 0.95rem;
+    transition: border-color 0.2s;              /* animación suave al hacer focus */
+    width: 100%;                                /* ocupa todo el ancho disponible */
+}
+
+/* Input al hacer clic */
+.form-grupo input:focus,
+.form-grupo select:focus {
+    outline: none;                              /* quitamos el borde azul del navegador */
+    border-color: var(--color-primary);         /* borde naranja al hacer focus */
+}
+
+/* Input de solo lectura (presupuesto total) */
+.form-grupo input[readonly] {
+    color: var(--color-primary);    /* naranja para que destaque el precio */
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: not-allowed;            /* cursor de prohibido para indicar que no se puede editar */
+}
+
+/* ── Plazo (input + select juntos) ── */
+.plazo-input {
+    display: flex;
+    gap: 10px;                  /* espacio entre el número y el desplegable */
+}
+
+.plazo-input input {
+    flex: 1;                    /* el input ocupa el máximo espacio posible */
+}
+
+.plazo-input select {
+    width: auto;                /* el select solo ocupa lo que necesita */
+}
+
+/* ── Texto pequeño de ayuda ── */
+.form-grupo small {
+    color: var(--color-text-muted);  /* gris suave */
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+/* ── Extras (checkboxes) ── */
+.opciones-extras {
+    display: flex;
+    flex-direction: column;     /* cada extra en su propia línea */
+    gap: 10px;
+}
+
+.opciones-extras label {
+    display: flex;
+    align-items: center;        /* checkbox y texto alineados verticalmente */
+    gap: 8px;                   /* espacio entre checkbox y texto */
+    color: var(--color-text);
+    cursor: pointer;            /* cursor de mano para indicar que es clickable */
+}
+
+.opciones-extras input[type="checkbox"] {
+    accent-color: var(--color-primary);  /* color naranja en el checkbox al marcarlo */
+    width: 16px;
+    height: 16px;
+}
+
+/* ── Condiciones ── */
+.condiciones-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.condiciones-label input[type="checkbox"] {
+    accent-color: var(--color-primary);  /* naranja al marcar */
+    width: 16px;
+    height: 16px;
+}
+
+/* ── Botones ── */
+.form-botones {
+    display: flex;
+    gap: 12px;                  /* espacio entre botones */
+    margin-top: 10px;
+}
+
+.form-botones button[type="submit"] {
+    background-color: var(--color-primary);  /* fondo naranja */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;   /* animación suave al hacer hover */
+}
+
+.form-botones button[type="submit"]:hover {
+    opacity: 0.85;              /* se oscurece un poco al pasar el ratón */
+}
+
+.form-botones button[type="reset"] {
+    background-color: transparent;          /* fondo transparente */
+    color: var(--color-text-muted);         /* texto gris */
+    border: 1px solid var(--color-border);  /* borde sutil */
+    border-radius: 8px;
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.form-botones button[type="reset"]:hover {
+    border-color: var(--color-primary);     /* borde naranja al pasar el ratón */
+    color: var(--color-primary);            /* texto naranja al pasar el ratón */
+}
+
+/* ── Responsive tablet ── */
+@media (min-width: 768px) {
+    .section-datos {
+        padding: 0;             /* quitamos el padding lateral en pantallas grandes */
+    }
+}
+
+/* =============================================
+   9. PÁGINA CONTACTO
+============================================= */
+
+/* ── Sección principal ── */
+.section-contacto {
+    max-width: var(--max-width);    /* mismo ancho máximo que el resto de la web */
+    margin: 60px auto;              /* centra la sección */
+    padding: 0 24px;                /* espacio lateral en móvil */
+}
+
+.section-contacto h2 {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);  /* tamaño responsive */
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ── Contenedor inner: info + mapa ── */
+.contacto-inner {
+    display: flex;
+    flex-direction: column;     /* en móvil, info arriba y mapa abajo */
+    gap: 40px;
+}
+
+/* ── Bloque de información ── */
+.contacto-info {
+    background-color: var(--color-bg-card);     /* fondo oscuro de card */
+    border: 1px solid var(--color-border);      /* borde sutil */
+    border-radius: 12px;                        /* bordes redondeados */
+    padding: 32px;
+}
+
+.contacto-info h3 {
+    color: var(--color-primary);    /* naranja para el título */
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+}
+
+/* ── Cada fila de dato (icono + texto) ── */
+.info-item {
+    display: flex;
+    align-items: center;        /* icono y texto alineados verticalmente */
+    gap: 14px;                  /* espacio entre icono y texto */
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    color: var(--color-primary);    /* iconos en naranja */
+    font-size: 1.1rem;
+    width: 20px;                    /* ancho fijo para que todos los textos queden alineados */
+    text-align: center;
+}
+
+.info-item p {
+    color: var(--color-text-muted); /* texto gris suave */
+    font-size: 0.95rem;
+}
+
+/* ── Contenedor del mapa ── */
+.contacto-mapa {
+    border-radius: 12px;            /* bordes redondeados */
+    overflow: hidden;               /* para que el mapa respete los bordes redondeados */
+    border: 1px solid var(--color-border);
+}
+
+#mapa {
+    width: 100%;
+    height: 450px;                  /* altura del mapa, ajústala a tu gusto */
+}
+
+
+/* ── Responsive tablet y desktop ── */
+@media (min-width: 768px) {
+    .contacto-inner {
+        flex-direction: row;        /* en pantallas grandes, info a la izquierda y mapa a la derecha */
+        align-items: stretch;       /* ambos bloques tienen la misma altura */
+    }
+
+    .contacto-info {
+        width: 300px;               /* ancho fijo para la info */
+        flex-shrink: 0;             /* evita que se encoja */
+    }
+
+    .contacto-mapa {
+        flex: 1;                    /* el mapa ocupa el resto del espacio disponible */
+    }
+}
+
+/* =============================================
+   10. PÁGINA AVISO LEGAL
+============================================= */
+.legal-container{
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    text-align: left; 
+}
+
+.legal-container h2{
+    color: black;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.legal-content h3{
+    color: var(--color-primary);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.legal-content p, .legal-content ul{
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.legal-content ul{
+    list-style: square;
+    margin-left: 20px;
+}
+
+.texto-negrita{
+    font-weight: bold;
+}
+
+/* =============================================
+   11. FOOTER
+   Estructura esperada en components.js:
+   <footer class="site-footer">
+     <p>© 2025 Personal Trainer Alina</p>
+   </footer>
+============================================= */
+.site-footer {
+    background-color: #141414;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.85rem;
+}
+
+.footer-titulo {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.site-footer a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-social{
+    padding: 10px 0px;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.footer-social h4{
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+/* Contenedor de los iconos */
+.social-iconos{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Estilo a los iconos */
+.social-iconos a{
+    text-decoration: none;
+    font-size: 24px;
+    transition: 0.4s;
+    width: 30px;
+    height: 30px;
+}
+/* Dirección de la empresa */
+.footer-address{
+    margin-bottom: 10px;
+    justify-content: center;
+    max-width: 100%;
+}
+
+/* H4 */
+.footer-address h4{
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+.footer-address address{
+    font-style: oblique;
+    font-size: 15px;
+}
+.footer-content{
+    font-size: 14px;
+}

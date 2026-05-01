@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Cargamos el CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Cargamos los iconos de las redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Personal Trainer Alina</title>
+</head>
+<body>
+    <header class="site-header">
+        <!-- Encabezado de la página web -->
+         <div class="header-inner">
+            <div class="logo">
+                <h1>
+                    <a href="index.html" class="logo-text">
+                        PERSONAL TRAINER 
+                    </a>
+                </h1>
+            </div>
+            <!-- Navegador -->
+          <nav class="navbar">
+            <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="views/galeria.html">Galería</a></li>
+                <li><a href="views/presupuesto.html">Presupuesto</a></li>
+                <li><a href="views/contacto.html">Contacto</a></li>
+            </ul>
+          </nav>
+    
+          <!-- Botón hamburguesa, solo visible en móvil -->
+           <button class="btn-hamburguesa" id="btn-hamburguesa">
+            <span></span>
+            <span></span>
+            <span></span>
+           </button>
+         </div>
+    
+         
+    </header>
+
+     <main>
+        <!-- Primera sección -->
+         <section class="hero" id="hero">
+            <div class="hero-image">
+                <img src="assets/fondo_inicial.png" alt="Fondo principal" class="fondo_inicial" width="2000" height="1121">
+            </div>
+            <div class="hero-text">
+                <h2>Empieza tu cambio</h2>
+                <h3>Cada paso te acerca a tu mejor versión</h3>
+                <p>Entrenamiento personalizado adaptador a tus objetivos, tu ritmo y tu vida.
+                    Tanto si quieres perder peso, ganar músculo o simplemente moverte mejor,
+                    estoy aquí para acompañarte y lograr tus objetivos.
+                </p>
+                <div class="badge-garantia">
+                    <i class="fa-solid fa-circle-check"></i> Primera sesi&oacute;n gratuita · Sin compromiso
+                </div>
+                <a href="views/presupuesto.html" class="btn-cta">Solicita información</a>
+            </div>
+         </section>
+
+         <!-- Segunda sección servicios prestados-->
+          <section class="section-services" id="section-services">
+            <h2>Servicios</h2>
+                <div class="div-services">
+                    <div class="grid-services">
+                        <article class="item-services">
+                            <i class="fa-solid fa-dumbbell"></i>
+                            <h3>Entrenamiento personal presencial</h3>
+                            <p>Sesiones individuales en gimnasio o al aire libre, con seguimiento directo del entrenador. 
+                                El plan se adapta a los objetivos y condición física de cada cliente, corrigiendo la técnica en tiempo real.</p>
+                            <ul>
+                                <li>Sesiones de 60 minutos</li>
+                                <li>Plan de entrenamiento personalizado</li>
+                                <li>Corrección de técnica en tiempo real</li>
+                                <li>Seguimiento de progreso mensual</li>
+                            </ul>
+                        </article>
+                        <article class="item-services">
+                            <i class="fa-solid fa-laptop"></i>
+                            <h3>Entrenamiento online</h3>
+                            <p>Plan de entrenamiento personalizado a distancia, con rutinas semanales, vídeos explicativos y seguimiento por mensajería
+                                 o videollamada. Ideal para quienes no pueden acudir en persona o prefieren entrenar desde casa.</p>
+                            <ul>
+                                <li>Rutinas semanales personalizadas</li>
+                                <li>Vídeos explicativos de cada ejercicio</li>
+                                <li>Seguimiento por mensajería o videollamada</li>
+                                <li>Flexibilidad horaria total</li>
+                            </ul>
+                        </article>
+                        <article class="item-services">
+                            <i class="fa-solid fa-apple-whole"></i>
+                            <h3>Asesoramiento nutricional</h3>
+                            <p>Guía alimentaria adaptada a los objetivos del cliente (pérdida de peso, ganancia muscular, rendimiento deportivo). 
+                                Incluye planificación de menús y recomendaciones para complementar el entrenamiento.</p>
+                            <ul>
+                                <li>Plan nutricional personalizado</li>
+                                <li>Planificación de menús semanales</li>
+                                <li>Recomendaciones de suplementación</li>
+                                <li>Revisiones y ajustes periódicos</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+
+          </section>
+
+          <!-- Sección de números de impacto -->
+           <div class="section-stats">
+                <div class="grid-stats">
+                    <div class="stat-item">
+                        <span class="stat-numero">+200</span>
+                        <span class="stat-label">Clientes satisfechos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-numero">8</span>
+                        <span class="stat-label">Años de experiencia</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-numero">98%</span>
+                        <span class="stat-label">Tasa de satisfacción</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-numero">+300</span>
+                        <span class="stat-label">Sesiones realizadas</span>
+                    </div>
+                </div>
+           </div>
+
+          <!-- Tercera sección noticias por JSON -->
+           <section class="noticias-json" id="noticias-json">
+                <h2>Noticias</h2>
+           </section>
+
+           <!-- Cuarta sección de testimonios -->
+            <section class="testimonios" id="testimonios">
+                <h2>Lo que opinan nuestros clientes</h2>
+
+                <!-- Media de valoración -->
+
+                <div class="valoracion-media">
+                    <span class="valoracion-numero">4.9</span>
+                    <div class="valoracion-estrellas">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <span class="valoracion-texto">Basado en 48 opiniones</span>
+                </div>
+
+                <!-- Tarjetas de testimonios -->
+                <div class="grid-testimonios">
+                    <article class="card-testimonio">
+                        <div class="testimonio-header">
+                            <div class="testimonio-avatar">MG</div>
+                            <div>
+                                <h3>Maria G.</h3>
+                                <span class="testimonio-perfil">Madre de familia, 38 años</span>
+                            </div>
+                        </div>
+                        <div class="testimonio-estrellas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>"Después de 3 meses perdí 8 kilos y me siento con más energía 
+                            El seguimiento personalizado marca la diferencia."
+                        </p>
+                    </article>
+
+                    <article class="card-testimonio">
+                        <div class="testimonio-header">
+                            <div class="testimonio-avatar">CM</div>
+                            <div>
+                                <h3>Carlos M.</h3>
+                                <span class="testimonio-perfil">Runner amateur, 42 años</span>
+                            </div>
+                        </div>
+                        <div class="testimonio-estrellas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>"Empecé el entrenamiento online sin saber muy bien si funcionaría,
+                            pero los resultados hablan solo. Muy profesional y siempre disponible."
+                        </p>
+                    </article>
+
+                    <article class="card-testimonio">
+                        <div class="testimonio-header">
+                            <div class="testimonio-avatar">NC</div>
+                            <div>
+                                <h3>Noelia C.</h3>
+                                <span class="testimonio-perfil">Oficinista, 29 años</span>
+                            </div>
+                        </div>
+                        <div class="testimonio-estrellas">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>"El Asesoramiento nutricional combinado con el entrenamiento ha cambiado mi 
+                            relación con la comida y el ejercicio. ¡Totalmente recomendable!."
+                        </p>
+                    </article>
+                </div>
+
+            </section>
+
+            <!-- Modal de noticias -->
+            <div class="modal-overlay" id="modal-overlay">
+                <div class="modal">
+                    <button class="modal-cerrar" id="modal-cerrar">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <span class="tag" id="modal-tag"></span>
+                    <span id="modal-titulo"></span>
+                    <span class="noticia-fecha" id="modal-fecha"></span>
+                    <p id="modal-contenido"></p>
+                </div>
+            </div>
+     </main>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <h4>Síguenos en nuestras redes sociales</h4>
+            <div class="social-iconos">
+                <a href="https://github.com/alipidev" target="_blank" aria-label="GitHub">
+                    <i class="fa-brands fa-github">
+                        
+                    </i>
+                </a>
+                <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+            <div class="footer-address">
+                <address>
+                    Ayuntamiento Valencia
+                    <br>
+                    46003, Valencia, España
+                </address>
+            </div>
+        <div class="footer-content">
+            <p>© 2026 Alipidev. Todos los derechos reservados. 
+            <a href="views/aviso-legal.html">Aviso Legal</a>
+            </p>
+        </div>
+    </footer>
+    <!-- Cargamos el script -->
+     <script src="/js/components.js"></script>
+</body>
+</html>

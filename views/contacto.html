@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Cargamos el CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Cargamos el CSS de Leaflet librería del mapa -->
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css">
+    <!-- Cargamos los iconos de las redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Contacto | Entrenador personal</title>
+</head>
+<body>
+    <header class="site-header">
+        <!-- Encabezado de la página web -->
+         <div class="header-inner">
+            <div class="logo">
+                <h1>
+                    <a href="../index.html" class="logo-text">
+                        PERSONAL TRAINER 
+                    </a>
+                </h1>
+            </div>
+            <!-- Navegador -->
+          <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="presupuesto.html">Presupuesto</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+          </nav>
+    
+          <!-- Botón hamburguesa, solo visible en móvil -->
+           <button class="btn-hamburguesa" id="btn-hamburguesa">
+            <span></span>
+            <span></span>
+            <span></span>
+           </button>
+         </div>
+    
+         
+    </header>
+
+    <main>
+        <section class="section-contacto">
+            <h2>Contacto</h2>
+
+            <div class="contacto-inner">
+                <!-- Datos de contacto -->
+                 <div class="contacto-info">
+                    <h3>Dónde encontrarnos</h3>
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Ayuntamiento de Valencia, Valencia</p>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid da-phone"></i>
+                        <p>+34 000 000 000</p>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>alina@personaltrainer.com</p>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <p>Lunes a Viernes de 8:00 - 20:00</p>
+                    </div>
+                 </div>
+
+                
+                
+
+                 <!-- Mapa -->
+                  <div class="contacto-mapa">
+                    <div id="mapa"></div>
+                  </div>
+
+                  
+            </div>
+        </section>
+    </main>
+
+     <!-- Footer -->
+     <footer class="site-footer">
+        <h4>Síguenos en nuestras redes sociales</h4>
+            <div class="social-iconos">
+                <a href="https://github.com/alipidev" target="_blank" aria-label="GitHub">
+                    <i class="fa-brands fa-github">
+                        
+                    </i>
+                </a>
+                <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+            <div class="footer-address">
+                <address>
+                    Ayuntamiento Valencia
+                    <br>
+                    46003, Valencia, España
+                </address>
+            </div>
+        <div class="footer-content">
+            <p>© 2026 Alipidev. Todos los derechos reservados. 
+            <a href="aviso-legal.html">Aviso Legal</a>
+            </p>
+        </div>
+    </footer>
+   <!-- Cargamos el script -->
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+   <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    <script src="../js/components.js"></script>
+    <script src="../js/mapa.js"></script> <!-- Js del mapa-->
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+[
+    {
+        "id": 1,
+        "tipo": "Consejo",
+        "tag": "consejo",
+        "titulo": "Los 5 errores más comunes al hacer sentadillas",
+        "descripcion": "Aprende a corregir tu técnica para evitar lesiones y sacar el máximo partido a este ejercicio clave.",
+        "fecha": "28 de abril de 2026",
+        "contenido": [
+                    "Rodillas hacia adentro: asegúrate de que las rodillas siguen la dirección de los pies.",
+                    "Talones levantados: toda la planta del pie debe estar en contacto con el suelo.",
+                    "Espalda redondeada: mantén el pecho arriba y la espalda recta.",
+                    "No bajar suficiente: intenta llegar al menos a 90 grados.",
+                    "Mirar hacia abajo: mantén la mirada al frente para proteger el cuello."
+                ]    
+    },
+    {
+        "id": 2,
+        "tipo": "Receta",
+        "tag": "receta",
+        "titulo": "Batido proteico post-entreno",
+        "descripcion": "Una receta rápida y nutritiva para recuperar el músculo despues de un buen entrenamiento",
+        "fecha":"20 de abril de 2026",
+        "contenido": [
+                    "1 plátano maduro.",
+                    "200ml de leche o bebida vegetal.",
+                    "30g de proteína en polvo de chocolate.",
+                    "1 cucharada de mantequilla de cacahuete.",
+                    "Hielo al gusto.",
+                    "Añade todos los ingredientes en una batidora y tritura hasta obtener una mezcla homogénea.",
+                    "Consúmelo dentro de los 30 minutos posteriores al entrenamiento."
+        ]    
+    },
+    {
+        "id": 3,
+        "tipo": "Reto mensual",
+        "tag": "reto mensual",
+        "titulo": "Reto de mayo: 30 días de abdominales",
+        "descripcion": "Únete al reto de mes y consigue un core más fuerte con tan solo 10 minutos al día",
+        "fecha": "18 de abril de 2026",
+        "contenido": [
+                    "Semana 1: 3 series de 10 crunches y 20 segundos de plancha.",
+                    "Semana 2: 3 series de 15 crunches y 30 segundos de plancha.",
+                    "Semana 3: 3 series de 20 crunches y 45 segundos de plancha.",
+                    "Semana 4: 4 series de 20 crunches y 60 segundos de plancha.",
+                    "Recuerda descansar un día entre sesiones y mantener una buena alimentación."
+        ]    
+    }
+]

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Personal Trainer Alina</title>
+    <!-- Cargamos el CSS de la librería externa Lightbox y de los iconos de las redes sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Estilos CSS de la galeria -->
+     <link rel="stylesheet" href="../css/galeria.css">
+     <!-- Estilos CSS de la página general -->
+     <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    
+    <header class="site-header">
+        <!-- Encabezado de la página web -->
+         <div class="header-inner">
+            <div class="logo">
+                <h1>
+                    <a href="../index.html" class="logo-text">
+                        PERSONAL TRAINER 
+                    </a>
+                </h1>
+            </div>
+            <!-- Navegador -->
+          <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="galeria.html" class="active">Galería</a></li>
+                <li><a href="presupuesto.html">Presupuesto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </nav>
+    
+          <!-- Botón hamburguesa, solo visible en móvil -->
+           <button class="btn-hamburguesa" id="btn-hamburguesa">
+            <span></span>
+            <span></span>
+            <span></span>
+           </button>
+         </div>
+    
+         
+    </header>
+
+    <!-- Contenido principal de la galería de imágenes -->
+    <main>
+        <section class="galeria" id="galeria">
+            <h2>Galería</h2>
+            <div class="grid-galeria">
+                <a href="../assets/galeria/acai.jpg" data-lightbox="galeria" data-title="Acai">
+                    <img src="../assets/galeria/acai.jpg" alt="Acai" width="2977" height="2977">
+                </a>
+                <a href="../assets/galeria/receta1.jpg" data-lightbox="galeria" data-title="receta1">
+                    <img src="../assets/galeria/receta1.jpg" alt="receta1" width="5760" height="3840">
+                </a>
+                <a href="../assets/galeria/ejercicio1.jpg" data-lightbox="galeria" data-title="ejercicio1">
+                    <img src="../assets/galeria/ejercicio1.jpg" alt="ejercicio1" width="2000" height="2000">
+                </a>
+                <a href="../assets/galeria/mancuernas.jpg" data-lightbox="galeria" data-title="mancuernas">
+                    <img src="../assets/galeria/mancuernas.jpg" alt="mancuernas" width="5470" height="3647">
+                </a>
+                <a href="../assets/galeria/ejercicio2.jpg" data-lightbox="galeria" data-title="ejercicio2">
+                    <img src="../assets/galeria/ejercicio2.jpg" alt="ejercicio2" width="3814" height="3814">
+                </a>
+                <a href="../assets/galeria/receta2.jpg" data-lightbox="galeria" data-title="receta2">
+                    <img src="../assets/galeria/receta2.jpg" alt="receta2" width="2938" height="2938">
+                </a>
+            </div>
+        </section>
+    </main>
+
+     <!-- Footer -->
+     <footer class="site-footer">
+        <p class="footer-titulo">Síguenos en nuestras redes sociales</p>
+            <div class="social-iconos">
+                <a href="https://github.com/alipidev" target="_blank" aria-label="GitHub">
+                    <i class="fa-brands fa-github">
+                        
+                    </i>
+                </a>
+                <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+            <div class="footer-address">
+                <address>
+                    Ayuntamiento Valencia
+                    <br>
+                    46003, Valencia, España
+                </address>
+            </div>
+        <div class="footer-content">
+            <p>© 2026 Alipidev. Todos los derechos reservados. 
+            <a href="aviso-legal.html">Aviso Legal</a>
+            </p>
+        </div>
+    </footer>
+   <!-- Cargamos el script -->
+    <script src="../js/components.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Cargamos el JS de Lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+</body>
+</html>
