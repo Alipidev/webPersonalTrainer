@@ -14,29 +14,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 L.marker([latNegocio, lngNegocio])
     .addTo(mapa)
     .bindPopup(`
-<<<<<<< HEAD
         <strong>Personal Trainer</strong><br>
-=======
-        <strong>Personal Trainer Alina</strong><br>
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
         Calle Ejemplo 123, Valencia
     `)
     .openPopup();
 
-<<<<<<< HEAD
 // Calculamos al ruta automáticamente al cargar la página
-=======
-// Capturamos el botón
-const btnRuta = document.getElementById('btn-ruta');
-
-// Cuando el usuario pulsa el botón
-btnRuta.addEventListener('click', function(){
-
-    // Cambiamos el texto del botón para indicar que está cargando
-    btnRuta.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Calculando...';
-    btnRuta.disabled = true;    // desactivamos el botón para que no se pulse dos veces
-
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
     // Pedimos la ubicación al usuario
     navigator.geolocation.getCurrentPosition(
 
@@ -61,26 +44,11 @@ btnRuta.addEventListener('click', function(){
                 routeWhileDragging: false,
                 show: false     // ocultamos el panel de instrucciones
             }).addTo(mapa);
-<<<<<<< HEAD
-=======
-
-            // Actualizamos el botón
-            btnRuta.innerHTML = '<i class="fa-solid fa-check"></i> Ruta calculada';
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
         },
 
         // Si rechaza
         function(error){
-<<<<<<< HEAD
             // Si rechaza solo se muestra el mapa con el marcador del negocio
             console.log('El usuario no ha compartido su ubicación');
         }
     );
-=======
-            btnRuta.innerHTML = '<i class="fa-solid fa-route"></i> Cómo llegar';
-            btnRuta.disabled = false;   // reactivamos el botón
-            alert('Necesitamos tu ubicación para calcular la ruta');
-        }
-    );
-});
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9

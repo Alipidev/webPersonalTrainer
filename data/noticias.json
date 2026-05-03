@@ -2,7 +2,6 @@
     {
         "id": 1,
         "tipo": "Consejo",
-<<<<<<< HEAD
         "tag": "consejo",
         "titulo": "Los 5 errores más comunes al hacer sentadillas",
         "descripcion": "Aprende a corregir tu técnica para evitar lesiones y sacar el máximo partido a este ejercicio clave.",
@@ -14,15 +13,10 @@
                     "No bajar suficiente: intenta llegar al menos a 90 grados.",
                     "Mirar hacia abajo: mantén la mirada al frente para proteger el cuello."
                 ]    
-=======
-        "titulo": "Los 5 errores más comunes al hacer sentadillas",
-        "descripcion": "Aprende a corregir tu técnica para evitar lesiones y sacar el máximo partido a este ejercicio clave."
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
     },
     {
         "id": 2,
         "tipo": "Receta",
-<<<<<<< HEAD
         "tag": "receta",
         "titulo": "Batido proteico post-entreno",
         "descripcion": "Una receta rápida y nutritiva para recuperar el músculo despues de un buen entrenamiento",
@@ -36,15 +30,10 @@
                     "Añade todos los ingredientes en una batidora y tritura hasta obtener una mezcla homogénea.",
                     "Consúmelo dentro de los 30 minutos posteriores al entrenamiento."
         ]    
-=======
-        "titulo": "Batido proteico post-entreno",
-        "descripcion": "Una receta rápida y nutritiva para recuperar el músculo despues de un buen entrenamiento"
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
     },
     {
         "id": 3,
         "tipo": "Reto mensual",
-<<<<<<< HEAD
         "tag": "reto mensual",
         "titulo": "Reto de mayo: 30 días de abdominales",
         "descripcion": "Únete al reto de mes y consigue un core más fuerte con tan solo 10 minutos al día",
@@ -56,9 +45,5 @@
                     "Semana 4: 4 series de 20 crunches y 60 segundos de plancha.",
                     "Recuerda descansar un día entre sesiones y mantener una buena alimentación."
         ]    
-=======
-        "titulo": "Reto de mayo: 30 días de abdominales",
-        "descripcion": "Únete al reto de mes y consigue un core más fuerte con tan solo 10 minutos al día"
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
     }
 ]
