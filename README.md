@@ -6,7 +6,7 @@ Proyecto web desarrollado como práctica de desarrollo frontend. Simula el sitio
 
 ## 🌐 Demo en vivo
 
-🔗 [Ver sitio en GitHub Pages](#) *(añade el enlace cuando lo tengas)*
+🔗 [https://alipidev.github.io/webPersonalTrainer/]
 
 ---
 
@@ -36,13 +36,8 @@ personal-trainer/
 │   ├── contacto.html
 │   └── aviso-legal.html
 │
-├── components/
-│   ├── header.html
-│   └── footer.html
-│
 ├── css/
 │   └── styles.css
-|   └── galeria.css
 │
 ├── js/
 │   └── components.js
@@ -70,7 +65,6 @@ personal-trainer/
 
 ## ✨ Funcionalidades
 
-- ✅ Header y footer cargados dinámicamente con `fetch`
 - ✅ Menú de navegación responsive con botón hamburguesa
 - ✅ Link activo resaltado automáticamente según la página actual
 - ✅ Noticias cargadas desde un archivo JSON externo
