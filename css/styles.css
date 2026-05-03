@@ -13,18 +13,11 @@
    4. PÁGINA DE INICIO (SECCIÓN SERVICIOS)
    5. PÁGINA DE INICIO (SECCIÓN NOTICIAS)
    6. PÁGINA DE INCIIO (SECCIÓN TESTIMONIOS)
-<<<<<<< HEAD
    7. PÁGINA DE GALERÍA
    8. PÁGINA PRESUPUESTOS
    9. PÁGINA CONTACTOS
    10. PÁGINA AVISO LEGAL
    11. FOOTER
-=======
-   7. PÁGINA PRESUPUESTOS
-   8. PÁGINA CONTACTOS
-   9. PÁGINA AVISO LEGAL
-   10. FOOTER
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
 ============================================= */
 
 /* =============================================
@@ -275,7 +268,6 @@ h1, h2, h3 {
     object-position: center top;
     display: block;
 }
-<<<<<<< HEAD
 /* Animación de deslizamiento desde la derecha */
 @keyframes deslizarDesdeDerechaHero {
     from {
@@ -287,8 +279,6 @@ h1, h2, h3 {
         transform: translateX(-50%); /* solo centrado */
     }
 }
-=======
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
 
 .hero-text {
     position: absolute;
@@ -298,10 +288,7 @@ h1, h2, h3 {
     transform: translateX(-50%);
     width: 90%;
     text-align: center;
-<<<<<<< HEAD
     animation: deslizarDesdeDerechaHero 1.5s ease-out 0.3s both;
-=======
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
 }
 
 .hero-text h2 {
@@ -317,7 +304,6 @@ h1, h2, h3 {
     color: var(--color-text-muted);
     font-weight: 400;
     text-shadow: 0 2px 8px rgba(0,0,0,0.8);
-<<<<<<< HEAD
     margin-bottom: 16px;
 }
 .hero-text p {
@@ -342,8 +328,6 @@ h1, h2, h3 {
 .btn-cta:hover {
     background-color: var(--color-border-hover);
     transform: scale(1.05);
-=======
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
 }
 
 @media (min-width: 768px) {
@@ -352,14 +336,11 @@ h1, h2, h3 {
         width: 70%;
     }
 
-<<<<<<< HEAD
     .btn-cta{
         font-size: 1.1rem;
         padding: 16px 40px;
     }
 
-=======
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
 }
 @media (min-width: 1024px){
     .hero-text{
@@ -422,7 +403,6 @@ h1, h2, h3 {
     line-height: 1.7;
 }
 
-<<<<<<< HEAD
 .badge-garantia{
     display: inline-block;
     color: var(--color-text);
@@ -481,8 +461,6 @@ h1, h2, h3 {
     font-size: clamp(0.9rem, 2vw, 1rem);
     color: var(--color-text-muted);
 }
-=======
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
 @media (min-width: 768px) {
     .grid-services { grid-template-columns: repeat(2, 1fr); }
 }
@@ -522,20 +500,13 @@ h1, h2, h3 {
     border-radius: 12px;
     padding: 24px;
     transition: border-color 0.25s;
-<<<<<<< HEAD
     cursor: pointer;
     transition: border-color 0.3s ease, transform 0.3 ease;
-=======
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
 }
 
 .card-noticia:hover {
     border-color: var(--color-primary);
-<<<<<<< HEAD
     transform: translateY(-5px);
-=======
-    transform: translateY(-4px);
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
 }
 
 .card-noticia h3 {
@@ -552,7 +523,6 @@ h1, h2, h3 {
     line-height: 1.7;
 }
 
-<<<<<<< HEAD
 .tag{
     display: inline-block;
     padding: 4px 12px;
@@ -687,8 +657,6 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
-=======
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
 @media (min-width: 768px) {
     .grid-noticias { grid-template-columns: repeat(2, 1fr); }
 }
@@ -701,7 +669,6 @@ h1, h2, h3 {
    6. TESTIMONIOS
 ============================================= */
 .testimonios {
-<<<<<<< HEAD
     padding: var(--padding-section);
     background-color: var(--color-bg);
     text-align: center;
@@ -742,30 +709,10 @@ h1, h2, h3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
-=======
-    background-color: var(--color-bg-section);
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
-    padding: var(--padding-section);
-}
-
-.testimonios h2 {
-    text-align: center;
-    font-size: clamp(1.5rem, 4vw, 2.2rem);
-    color: #ffffff;
-    margin-bottom: 48px;
-}
-
-.grid-testimonios {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
     max-width: var(--max-width);
     margin: 0 auto;
 }
 
-<<<<<<< HEAD
 /* Tarjeta testimonio */
 .card-testimonio {
     background-color: var(--color-bg-card);
@@ -826,48 +773,6 @@ h1, h2, h3 {
     color: var(--color-text-muted);
     line-height: 1.7;
     font-size: 0.95rem;
-=======
-.grid-testimonios article {
-    background-color: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    padding: 30px 26px 26px;
-    position: relative;
-    transition: border-color 0.25s;
-}
-
-.grid-testimonios article:hover {
-    border-color: var(--color-primary);
-}
-
-.grid-testimonios article::before {
-    content: '"';
-    font-size: 5rem;
-    color: var(--color-primary);
-    position: absolute;
-    top: 6px;
-    left: 20px;
-    line-height: 1;
-    opacity: 0.35;
-    font-family: Georgia, serif;
-}
-
-.grid-testimonios h3 {
-    font-size: 0.85rem;
-    color: var(--color-primary);
-    margin-bottom: 10px;
-    padding-top: 24px;
-    font-weight: 600;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-}
-
-.grid-testimonios p {
-    color: var(--color-text-muted);
-    font-size: 0.93rem;
-    font-style: italic;
-    line-height: 1.7;
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
 }
 
 @media (min-width: 768px) {
@@ -877,7 +782,6 @@ h1, h2, h3 {
 @media (min-width: 1024px) {
     .grid-testimonios { grid-template-columns: repeat(3, 1fr); }
 }
-<<<<<<< HEAD
 
 /* =============================================
    7. PÁGINA DE GALERÍA
@@ -960,10 +864,6 @@ h1, h2, h3 {
 
 /* =============================================
    8. PÁGINA PRESUPUESTOS
-=======
-/* =============================================
-   7. PÁGINA PRESUPUESTOS
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
 ============================================= */
 
 .error{
@@ -1147,11 +1047,7 @@ legend {
 }
 
 /* =============================================
-<<<<<<< HEAD
    9. PÁGINA CONTACTO
-=======
-   8. PÁGINA CONTACTO
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
 ============================================= */
 
 /* ── Sección principal ── */
@@ -1221,33 +1117,6 @@ legend {
     height: 450px;                  /* altura del mapa, ajústala a tu gusto */
 }
 
-<<<<<<< HEAD
-=======
-/* ── Botón cómo llegar ── */
-
-
-#btn-ruta {
-    width: 100%;                /* ocupa todo el ancho de la info */
-    margin-top: 10px;           /* separación de los datos de arriba */
-    background-color: var(--color-primary);
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 20px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;    /* centra el icono y el texto */
-    gap: 8px;
-    transition: opacity 0.2s;
-}
-
-#btn-ruta:hover {
-    opacity: 0.85;
-}
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
 
 /* ── Responsive tablet y desktop ── */
 @media (min-width: 768px) {
@@ -1267,11 +1136,7 @@ legend {
 }
 
 /* =============================================
-<<<<<<< HEAD
    10. PÁGINA AVISO LEGAL
-=======
-   9. PÁGINA AVISO LEGAL
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
 ============================================= */
 .legal-container{
     max-width: 800px;
@@ -1306,17 +1171,12 @@ legend {
     margin-left: 20px;
 }
 
-<<<<<<< HEAD
 .texto-negrita{
     font-weight: bold;
 }
 
 /* =============================================
    11. FOOTER
-=======
-/* =============================================
-   10. FOOTER
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
    Estructura esperada en components.js:
    <footer class="site-footer">
      <p>© 2025 Personal Trainer Alina</p>
@@ -1331,15 +1191,12 @@ legend {
     font-size: 0.85rem;
 }
 
-<<<<<<< HEAD
 .footer-titulo {
     font-weight: 700;
     font-size: 1rem;
     margin-bottom: 12px;
 }
 
-=======
->>>>>>> 70d8169ad5f5acf8b038347f8f501cc3585eb8c9
 .site-footer a {
     color: var(--color-primary);
     text-decoration: none;
