@@ -543,7 +543,7 @@ h1, h2, h3 {
 }
 
 .tag-reto{
-    background-color: rgba(88, 166, 255, 0,2);
+    background-color: rgba(88, 166, 255, 0.2);
     color: #58a6ff;
 }
 
